@@ -1,0 +1,11 @@
+ <div style="margin-bottom: 5px;">
+    <h5 style="color: white;">Select an account:</h5>
+ </div>
+ <div class="form-group d-flex justify-content-center">
+  <select class="form-control w-50 " (change)="onChange($event.target.value)"  name="miselect"  [value]= 0 >
+    <option  *ngFor="let item of accounts;let i = index" [value]="i">{{item}}</option>
+  </select>
+ </div>
+    
+
+

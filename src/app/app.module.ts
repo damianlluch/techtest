@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EjerciciosComponent } from './ejercicios/ejercicios.component';
+import { FormsModule } from '@angular/forms';
+import { ChildComponent } from './child/child.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EjerciciosComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

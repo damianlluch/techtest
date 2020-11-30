@@ -1,0 +1,30 @@
+<style>
+  .container {
+    max-width: 1800px;
+ }
+  .box {
+    height: 1000px;
+  }
+
+
+
+</style>
+<div class="container h-100 w-100 ">
+    <div class="row justify-content-center row-centered align-items-center">
+        <div class="col-6 box d-flex align-items-center justify-content-center my-auto align-self-center">
+          <div>
+            <h1 class="display-4 py-4 text-truncate font-weight-bold">Parent</h1>
+            <div class="px-2">
+            </div>
+            <h5>Account: <strong>{{referencia}}</strong></h5>
+            <h5>Has a balance of <strong> {{(balance * toEurRate)+ balanceEur | currency:'EUR':'symbol':'4.2-2' }}</strong></h5>
+          </div>
+        </div>
+        <div class="col-6 d-flex align-items-center box gradiante my-auto  align-self-center">
+          <div style="margin-left: 30%">
+            <h1 class="display-4 py-4 text-truncate font-weight-bold" style="color: white;">Component</h1>
+            <app-child class="justify-content-center" [childData]="data" (messageEvent)="receiveMessage($event)" ></app-child>
+          </div>
+        </div>
+    </div>
+</div>
